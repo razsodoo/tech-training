@@ -7,7 +7,7 @@
     'author': 'RAZS',
     'license': 'LGPL-3',
     'support': 'ricardozs96@gmail.com',
-    'depends': ['sale', 'base', 'sale_management'],
+    'depends': ['sale_management'],
     'data': [
         'views/sale_order_form_view.xml',
         'views/report_saleorder.xml',
