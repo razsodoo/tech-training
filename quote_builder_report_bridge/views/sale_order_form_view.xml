@@ -4,6 +4,9 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_quotation_send']" position="after">
+                <button string="Print Quote" name="sale.action_report_saleorder" type="action" class="btn-primary"/>
+            </xpath>
             <xpath expr="//field[@name='payment_term_id']" position="after">
                 <field name="report_id"/>
             </xpath>
