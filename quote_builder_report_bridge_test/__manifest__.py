@@ -5,9 +5,7 @@
     'description': 'This module extends the standard Sale Order report by allowing users to select custom reports created with Odoo Studio.',
     'category': 'Sales',
     'author': 'RAZS',
-    'license': 'OPL-1',
-    'price': 15,
-    'currency': 'USD',
+    'license': 'LGPL-3',
     'support': 'ricardozs96@gmail.com',
     'depends': ['sale', 'base', 'sale_management'],
     'data': [
