@@ -1,0 +1,19 @@
+<odoo>
+    <record id="custom_report_quote_builder_extension" model="ir.ui.view">
+        <field name="name">custom.report.quote.builder.extension</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.report_saleorder_raw"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//t[@t-call='sale.report_saleorder_document']" position="replace">
+                    <t t-if="doc.report_id and doc.report_id.report_name != 'sale.report_saleorder'">
+                        <t t-call="#{doc.report_id.report_name}" t-lang="doc.partner_id.lang"/>
+                    </t>
+                    <t t-else="">
+                        <t t-call="sale.report_saleorder_document" t-lang="doc.partner_id.lang"/>
+                    </t>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>
