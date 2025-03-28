@@ -6,11 +6,11 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//t[@t-call='sale.report_saleorder_document']" position="replace">
-                    <t t-if="doc.report_id and doc.report_id.report_name != 'sale.report_saleorder'">
-                        <t t-call="#{doc.report_id.report_name}" t-lang="doc.partner_id.lang"/>
+                    <t t-if="not doc.report_id or doc.report_id.report_name == 'sale.report_saleorder'">
+                        <t t-call="sale.report_saleorder_document" t-lang="doc.partner_id.lang"/>
                     </t>
                     <t t-else="">
-                        <t t-call="sale.report_saleorder_document" t-lang="doc.partner_id.lang"/>
+                        <t t-call="#{doc.report_id.report_name}" t-lang="doc.partner_id.lang"/>
                     </t>
                 </xpath>
             </data>
