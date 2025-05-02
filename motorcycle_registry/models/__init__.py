@@ -1,0 +1,1 @@
+from . import motorcicle_registry
