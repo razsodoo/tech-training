@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="motorcycle_registry_demo_1" model="motorcycle.registry">
+        <field name="current_mileage">250</field>
+        <field name="first_name">John</field>
+        <field name="last_name">Doe</field>
+        <field name="license_plate">ABC123</field>
+        <field name="registry_number">REG001</field>
+        <field name="vin">1HGCM82633A123456</field>
+    </record>
+
+    <record id="motorcycle_registry_demo_2" model="motorcycle.registry">
+        <field name="current_mileage">5250</field>
+        <field name="date_registry">2023-01-27</field>
+        <field name="first_name">Alice</field>
+        <field name="last_name">Smith</field>
+        <field name="license_plate">XYZ789</field>
+        <field name="registry_number">REG002</field>
+        <field name="vin">2FTRX18L1XCA12345</field>
+    </record>
+
+    <record id="motorcycle_registry_demo_3" model="motorcycle.registry">
+        <field name="current_mileage">23250</field>
+        <field name="date_registry" eval="(DateContext().today() - relativedelta(months=1)).strftime('%Y-%m-%d')"/>
+        <field name="first_name">Carlos</field>
+        <field name="last_name">Ruiz</field>
+        <field name="license_plate">MNO456</field>
+        <field name="registry_number">REG003</field>
+        <field name="vin">JH4KA8270MC123456</field>
+    </record>
+</odoo>
