@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_motorcycle_registry_form" model="ir.ui.view">
+        <field name="name">motorcycle.registry.form</field>
+        <field name="model">motorcycle.registry</field>
+        <field name="arch" type="xml">
+            <form string="Motorcycle Registry">
+                <header>
+                    <field name="registry_number"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group string="Motorcycle Information">
+                            <field name="date_registry"/>
+                            <field name="vin"/>
+                            <field name="current_mileage"/>
+                            <field name="license_plate"/>
+                        </group>
+                        <group string="Owner Information">
+                            <field name="first_name"/>
+                            <field name="last_name"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Certificate Title">
+                            <field name="certificate_title"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_motorcycle_registry_tree" model="ir.ui.view">
+        <field name="name">motorcycle.registry.tree</field>
+        <field name="model">motorcycle.registry</field>
+        <field name="arch" type="xml">
+            <list string="Motorcycle Registries">
+                <field name="registry_number"/>
+                <field name="vin"/>
+                <field name="license_plate"/>
+                <field name="first_name"/>
+                <field name="last_name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_motorcycle_registry_search" model="ir.ui.view">
+        <field name="name">motorcycle.registry.search</field>
+        <field name="model">motorcycle.registry</field>
+        <field name="arch" type="xml">
+            <search string="Search Motorcycle Registries">
+                <field name="registry_number"/>
+                <field name="vin"/>
+                <field name="first_name"/>
+                <field name="last_name"/>
+                <field name="license_plate"/>
+                <filter name="filter_registry_date" date="date_registry" string="Registration Date"/>
+                <filter name="groupby_registry_date" string="Registration Date" context="{'group_by':'date_registry'}"/>
+
+                <!-- Filtros personalizados -->
+                <filter name="filter_recent" string="Recent Registries" domain="[('date_registry', '&gt;=', (context_today() - relativedelta(months=1)).strftime('%Y-%m-%d'))]"/>
+                <filter name="filter_no_plate" string="No License Plate" domain="[('license_plate', '=', False)]"/>
+                <filter name="filter_low_mileage" string="Low Mileage" domain="[('current_mileage', '&lt;=', 1000)]"/>
+
+                <!-- Agrupación -->
+                <group expand="0" string="Group By">
+                    <filter name="groupby_registry_date" string="Registration Date" context="{'group_by': 'date_registry'}"/>
+                    <filter name="groupby_owner" string="Owner" context="{'group_by': 'last_name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>
