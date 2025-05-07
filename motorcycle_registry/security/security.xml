@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Category for groups -->
+    <record id="motorcycle_registry_groups_category" model="ir.module.category">
+        <field name="name">Motorcycle Registry</field>
+        <field name="description">Holds all the different Motorcycle Registry Groups</field>
+    </record>
+
+    <!-- Registry User Group -->
+    <record id="group_registry_user" model="res.groups">
+        <field name="name">Motorcycle Registry/User</field>
+        <field name="category_id" ref="motorcycle_registry_groups_category"/>
+    </record>
+
+    <!-- Registry Admin Group (inherits from User) -->
+    <record id="group_registry_admin" model="res.groups">
+        <field name="name">Motorcycle Registry/Admin</field>
+        <field name="category_id" ref="motorcycle_registry_groups_category"/>
+        <field name="implied_ids" eval="[Command.link(ref('group_registry_user'))]"/>
+    </record>
+</odoo>

@@ -29,5 +29,10 @@
             <field name="registry_number">REG003</field>
             <field name="vin">JH4KA8270MC123456</field>
         </record>
+
+        <!-- Add Mitchel Admin to Registry Admin group -->
+        <record id="base.user_admin" model="res.users">
+            <field name="groups_id" eval="[Command.link(ref('motorcycle_registry.group_registry_admin'))]"/>
+        </record>
     </data>
 </odoo>

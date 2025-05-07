@@ -9,7 +9,10 @@
     'website': 'www.github.com/razsodoo/tech-training',
     'category': 'Kawiil/Custom Modules',
     'depends': ['base'],
-    'data': [],
+    'data': [
+        "security/security.xml",
+        "security/ir.model.access.csv",
+    ],
     'demo': [
         'demo/motorcycle_registry_demo.xml',
     ],
