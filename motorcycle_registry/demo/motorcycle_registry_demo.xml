@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data noupdate="0">
+
         <record id="motorcycle_registry_demo_1" model="motorcycle.registry">
             <field name="current_mileage">250</field>
             <field name="first_name">Ana</field>
             <field name="last_name">López</field>
-            <field name="license_plate">ABC123</field>
-            <field name="registry_number">REG001</field>
-            <field name="vin">1HGCM82633A123456</field>
+            <field name="license_plate">KLV453</field>
+            <field name="vin">KA21AB12345</field>
         </record>
 
         <record id="motorcycle_registry_demo_2" model="motorcycle.registry">
@@ -15,9 +14,8 @@
             <field name="date_registry">2023-01-27</field>
             <field name="first_name">Luis</field>
             <field name="last_name">Pérez</field>
-            <field name="license_plate">XYZ789</field>
-            <field name="registry_number">REG002</field>
-            <field name="vin">2HGCM82633A654321</field>
+            <field name="license_plate">XYA89CD</field>
+            <field name="vin">XY23Z512345</field>
         </record>
 
         <record id="motorcycle_registry_demo_3" model="motorcycle.registry">
@@ -25,14 +23,14 @@
             <field name="date_registry" eval="(DateTime.today() - relativedelta(months=2)).strftime('%Y-%m-%d')"/>
             <field name="first_name">Carlos</field>
             <field name="last_name">Ruiz</field>
-            <field name="license_plate">MNO456</field>
-            <field name="registry_number">REG003</field>
-            <field name="vin">JH4KA8270MC123456</field>
+            <field name="license_plate">MN45</field>
+            <field name="vin">MN24GH54321</field>
         </record>
 
         <!-- Add Mitchel Admin to Registry Admin group -->
         <record id="base.user_admin" model="res.users">
             <field name="groups_id" eval="[Command.link(ref('motorcycle_registry.group_registry_admin'))]"/>
         </record>
+
     </data>
 </odoo>

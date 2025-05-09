@@ -12,6 +12,7 @@
     'data': [
         "security/security.xml",
         "security/ir.model.access.csv",
+        'data/motorcycle_registry_sequence.xml',
         "views/motorcycle_registry_menu.xml",
         "views/motorcycle_registry_view.xml",
     ],
