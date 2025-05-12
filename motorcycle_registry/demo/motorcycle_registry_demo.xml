@@ -20,29 +20,36 @@
             <field name="phone">+521234567892</field>
         </record>
 
-        <!-- Motorcycle registry demo records with owner_id -->
         <record id="motorcycle_registry_demo_1" model="motorcycle.registry">
             <field name="current_mileage">250</field>
             <field name="date_registry">2025-01-15</field>
             <field name="license_plate">KLV453</field>
             <field name="vin">KA21AB12345</field>
             <field name="owner_id" ref="res_partner_ana"/>
+            <field name="registry_number">MRN0001</field>
         </record>
-
+        
         <record id="motorcycle_registry_demo_2" model="motorcycle.registry">
             <field name="current_mileage">5250</field>
             <field name="date_registry">2023-01-27</field>
             <field name="license_plate">XYA89CD</field>
             <field name="vin">XY23Z512345</field>
             <field name="owner_id" ref="res_partner_luis"/>
+            <field name="registry_number">MRN0002</field>
         </record>
-
+        
         <record id="motorcycle_registry_demo_3" model="motorcycle.registry">
             <field name="current_mileage">23250</field>
             <field name="date_registry" eval="(DateTime.today() - relativedelta(months=2)).strftime('%Y-%m-%d')"/>
             <field name="license_plate">MN45</field>
             <field name="vin">MN24GH54321</field>
             <field name="owner_id" ref="res_partner_carlos"/>
+            <field name="registry_number">MRN0003</field>
+        </record>
+
+        <!-- Update Sequence to next number -->
+        <record id="motorcycle_registry_seq" model="ir.sequence">
+            <field name="number_next">4</field>
         </record>
 
         <!-- Add Mitchel Admin to Registry Admin group -->

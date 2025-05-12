@@ -11,8 +11,7 @@ class MotorcycleRegistry(models.Model):
     current_mileage = fields.Float()
     date_registry = fields.Date()
     license_plate = fields.Char(required=True)
-    # registry_number = fields.Char(required=True, copy=False, readonly=True, default="MRN0000")
-    registry_number = fields.Char(required=True, copy=False, readonly=True)
+    registry_number = fields.Char(required=True, copy=False, readonly=True, default="MRN0000")
     vin = fields.Char(required=True, copy=False)
 
     # New fields
@@ -43,7 +42,7 @@ class MotorcycleRegistry(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
-            if not vals.get('registry_number'):
+            if vals.get('registry_number', ("MRN0000")) == ('MRN0000'):
                 vals['registry_number'] = self.env['ir.sequence'].next_by_code('motorcycle.registry') or 'MRN0000'
         return super().create(vals_list)
 

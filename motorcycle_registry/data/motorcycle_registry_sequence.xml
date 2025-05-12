@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<odoo noupdate="1">
     <!-- Sequence definition -->
     <record id="motorcycle_registry_seq" model="ir.sequence">
         <field name="name">Motorcycle Registry Number</field>
