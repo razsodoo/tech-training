@@ -8,7 +8,7 @@
     'version': '0.0.1',
     'website': 'www.github.com/razsodoo/tech-training',
     'category': 'Kawiil/Custom Modules',
-    'depends': ['base'],
+    'depends': ['base', 'contacts'],
     'data': [
         "security/security.xml",
         "security/ir.model.access.csv",
