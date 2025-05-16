@@ -8,16 +8,18 @@
     'version': '0.0.1',
     'website': 'www.github.com/razsodoo/tech-training',
     'category': 'Kawiil/Custom Modules',
-    'depends': ['base', 'contacts'],
+    'depends': ['base','contacts','stock'],
     'data': [
         "security/security.xml",
         "security/ir.model.access.csv",
         'data/motorcycle_registry_sequence.xml',
         "views/motorcycle_registry_menu.xml",
         "views/motorcycle_registry_view.xml",
+        "views/product_template_motorcycle_form_view.xml",
     ],
     'demo': [
         'demo/motorcycle_registry_demo.xml',
+        'demo/motorcycle_product_demo.xml',
     ],
     'application': True,
 }

@@ -1,0 +1,43 @@
+<odoo>
+    <data noupdate="1">
+
+        <!-- Producto tipo motocicleta 1 -->
+        <record id="product_motorcycle_demo_1" model="product.template">
+            <field name="name">Motorcycle A</field>
+            <field name="is_motorcycle">1</field>
+            <field name="type">consu</field>
+            <field name="list_price">9990</field>
+            <field name="standard_price">7000</field>
+            <field name="horsepower">45.5</field>
+            <field name="top_speed">160</field>
+            <field name="torque">80</field>
+            <field name="battery_capacity">0m</field>
+            <field name="charge_time">3.5</field>
+            <field name="range">180</field>
+            <field name="curb_weight">145</field>
+            <field name="make">Zero</field>
+            <field name="model">SR/F</field>
+            <field name="year">2023</field>
+        </record>
+
+        <!-- Producto tipo motocicleta 2 -->
+        <record id="product_motorcycle_demo_2" model="product.template">
+            <field name="name">Motorcycle B</field>
+            <field name="is_motorcycle">1</field>
+            <field name="type">consu</field>
+            <field name="list_price">13990</field>
+            <field name="standard_price">9900</field>
+            <field name="horsepower">65</field>
+            <field name="top_speed">200</field>
+            <field name="torque">110</field>
+            <field name="battery_capacity">xl</field>
+            <field name="charge_time">4.2</field>
+            <field name="range">250</field>
+            <field name="curb_weight">168</field>
+            <field name="make">Harley</field>
+            <field name="model">LiveWire</field>
+            <field name="year">2024</field>
+        </record>
+
+    </data>
+</odoo>
