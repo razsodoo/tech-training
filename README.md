@@ -1,12 +1,8 @@
-Aquí tienes una versión mejorada y más clara de tu archivo `README.md` con formato profesional y explicaciones breves:
-
-````markdown
 # Tech Training
 
 This repository contains resources and examples for Odoo technical training.
 
 ---
-````
 
 ## 🔧 Useful Bash Commands
 
