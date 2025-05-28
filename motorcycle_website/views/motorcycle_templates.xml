@@ -4,49 +4,62 @@
         <t t-call="website.layout">
             <div class="container">
                 <h1 class="text-center">Motorcycle Comparison</h1>
-                <table class="table table-bordered">
+                <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th>Specs</th>
                             <t t-foreach="motorcycles" t-as="bike">
-                                <th><t t-esc="bike.name"/></th>
+                                <th><t t-esc="bike.display_name"/></th>
                             </t>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Launch Date</td>
+                        <tr>
+                            <td>Launch Year</td>
                             <t t-foreach="motorcycles" t-as="bike">
-                                <td><t t-esc="bike.launch_date"/></td>
+                                <td><t t-esc="bike.year or ''"/></td>
                             </t>
                         </tr>
-                        <tr><td>Range</td>
+                        <tr>
+                            <td>Range (miles)</td>
                             <t t-foreach="motorcycles" t-as="bike">
-                                <td><t t-esc="bike.range"/></td>
+                                <td><t t-esc="bike.range or 0"/></td>
                             </t>
                         </tr>
-                        <tr><td>Horsepower</td>
+                        <tr>
+                            <td>Horsepower</td>
                             <t t-foreach="motorcycles" t-as="bike">
-                                <td><t t-esc="bike.horsepower"/></td>
+                                <td><t t-esc="bike.horsepower or 0"/></td>
                             </t>
                         </tr>
-                        <tr><td>Torque</td>
+                        <tr>
+                            <td>Torque</td>
                             <t t-foreach="motorcycles" t-as="bike">
-                                <td><t t-esc="bike.torque"/></td>
+                                <td><t t-esc="bike.torque or 0"/></td>
                             </t>
                         </tr>
-                        <tr><td>Top Speed</td>
+                        <tr>
+                            <td>Top Speed (mph)</td>
                             <t t-foreach="motorcycles" t-as="bike">
-                                <td><t t-esc="bike.top_speed"/></td>
+                                <td><t t-esc="bike.top_speed or 0"/></td>
                             </t>
                         </tr>
-                        <tr><td>Battery Capacity</td>
+                        <tr>
+                            <td>Battery Capacity</td>
                             <t t-foreach="motorcycles" t-as="bike">
-                                <td><t t-esc="bike.battery_capacity"/></td>
+                                <td><t t-esc="bike.battery_capacity or ''"/></td>
                             </t>
                         </tr>
-                        <tr><td>Curb Weight</td>
+                        <tr>
+                            <td>Charge Time (hrs)</td>
                             <t t-foreach="motorcycles" t-as="bike">
-                                <td><t t-esc="bike.curb_weight"/></td>
+                                <td><t t-esc="bike.charge_time or 0"/></td>
+                            </t>
+                        </tr>
+                        <tr>
+                            <td>Curb Weight (lbs)</td>
+                            <t t-foreach="motorcycles" t-as="bike">
+                                <td><t t-esc="bike.curb_weight or 0"/></td>
                             </t>
                         </tr>
                     </tbody>
