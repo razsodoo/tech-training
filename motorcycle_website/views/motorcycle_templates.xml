@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="compare_template" name="Motorcycle Comparison">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1 class="text-center">Motorcycle Comparison</h1>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Specs</th>
+                            <t t-foreach="motorcycles" t-as="bike">
+                                <th><t t-esc="bike.name"/></th>
+                            </t>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Launch Date</td>
+                            <t t-foreach="motorcycles" t-as="bike">
+                                <td><t t-esc="bike.launch_date"/></td>
+                            </t>
+                        </tr>
+                        <tr><td>Range</td>
+                            <t t-foreach="motorcycles" t-as="bike">
+                                <td><t t-esc="bike.range"/></td>
+                            </t>
+                        </tr>
+                        <tr><td>Horsepower</td>
+                            <t t-foreach="motorcycles" t-as="bike">
+                                <td><t t-esc="bike.horsepower"/></td>
+                            </t>
+                        </tr>
+                        <tr><td>Torque</td>
+                            <t t-foreach="motorcycles" t-as="bike">
+                                <td><t t-esc="bike.torque"/></td>
+                            </t>
+                        </tr>
+                        <tr><td>Top Speed</td>
+                            <t t-foreach="motorcycles" t-as="bike">
+                                <td><t t-esc="bike.top_speed"/></td>
+                            </t>
+                        </tr>
+                        <tr><td>Battery Capacity</td>
+                            <t t-foreach="motorcycles" t-as="bike">
+                                <td><t t-esc="bike.battery_capacity"/></td>
+                            </t>
+                        </tr>
+                        <tr><td>Curb Weight</td>
+                            <t t-foreach="motorcycles" t-as="bike">
+                                <td><t t-esc="bike.curb_weight"/></td>
+                            </t>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>
