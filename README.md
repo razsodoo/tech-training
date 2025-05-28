@@ -6,6 +6,7 @@ Aquí tienes una versión mejorada y más clara de tu archivo `README.md` con fo
 This repository contains resources and examples for Odoo technical training.
 
 ---
+````
 
 ## 🔧 Useful Bash Commands
 
