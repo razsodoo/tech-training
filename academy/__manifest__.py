@@ -12,10 +12,13 @@
     'category': 'Custom Modules/Tech Training',
     'depends': ['base'],
     'data': [
+        'security/academy_groups.xml',
         'security/ir.model.access.csv',
-        'demo/academy_course_demo.xml',
+        'security/academy_security.xml',
         'views/academy_course_views.xml',
     ],
-    'demo': [],
+    'demo': [
+        'demo/course_demo.xml',
+    ],
     'application': True,
 }
