@@ -1,0 +1,56 @@
+<odoo>
+    <template id="course_website" name="Course Website">
+        <t t-call="website.layout">
+            <div class="container my-5">
+                <h1 class="mb-4">Available Courses</h1>
+                <ul class="list-group">
+                    <t t-foreach="courses" t-as="course">
+                        <li class="list-group-item mb-4">
+                            <h4><t t-esc="course.name"/></h4>
+                            <p><t t-esc="course.description"/></p>
+
+                            <strong>Sessions</strong>
+                            <t t-foreach="course.session_ids" t-as="session">
+                                <p>
+                                    <a t-attf-href="/academy/{{ slug(session) }}">
+                                        <t t-out="session.name"/>
+                                    </a>
+                                </p>
+                                <p>
+                                    Last Modified:
+                                    <i t-field="session.write_date" t-field-options='{"format": "long"}'/>
+                                </p>
+                            </t>
+                        </li>
+                    </t>
+                </ul>
+            </div>
+        </t>
+    </template>
+
+    <template id="session_website" name="Session Website">
+        <t t-call="website.layout">
+            <div class="container my-5">
+                <h1 class="mb-4">Session: <t t-esc="session.name"/></h1>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Instructor:</strong>
+                        <t t-esc="session.instructor_id.name"/>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Start Date:</strong>
+                        <t t-esc="session.start_date"/>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Duration:</strong>
+                        <t t-esc="session.duration"/> days
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Description:</strong>
+                        <t t-esc="session.description"/>
+                    </li>
+                </ul>
+            </div>
+        </t>
+    </template>
+</odoo>

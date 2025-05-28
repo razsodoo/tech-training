@@ -1,0 +1,21 @@
+<odoo>
+    <data noupdate="1">
+        <record id="academy_course_beginner" model="academy.course">
+            <field name="name">Python for Beginners</field>
+            <field name="description">An introduction to Python programming.</field>
+            <field name="level">beginner</field>
+        </record>
+
+        <record id="academy_course_intermediate" model="academy.course">
+            <field name="name">Advanced Odoo Development</field>
+            <field name="description">Covers advanced topics on building Odoo modules.</field>
+            <field name="level">intermediate</field>
+        </record>
+
+        <record id="academy_course_advanced" model="academy.course">
+            <field name="name">Machine Learning Mastery</field>
+            <field name="description">Full pipeline of production-ready ML solutions.</field>
+            <field name="level">advanced</field>
+        </record>
+    </data>
+</odoo>

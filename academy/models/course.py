@@ -17,3 +17,9 @@ class Course(models.Model):
         ],
         copy=False
     )
+
+    session_ids = fields.One2many(
+        comodel_name='academy.session',
+        inverse_name='course_id',
+        string="Sessions"
+    )
