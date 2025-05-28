@@ -1,0 +1,6 @@
+<odoo>
+    <menuitem id="academy_root_menu" name="Academy" sequence="10" web_icon="academy,static/description/icon.png"/>
+
+    <menuitem id="academy_menu_course" name="Courses" parent="academy_root_menu" action="action_academy_course" sequence="20"/>
+    <menuitem id="academy_menu_session" name="Sessions" parent="academy_root_menu" action="action_academy_session" sequence="30"/>
+</odoo>

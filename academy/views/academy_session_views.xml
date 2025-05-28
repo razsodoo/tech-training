@@ -1,0 +1,42 @@
+<odoo>
+    <record id="view_academy_session_tree" model="ir.ui.view">
+        <field name="name">academy.session.tree</field>
+        <field name="model">academy.session</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="session_number"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="course_id"/>
+                <field name="instructor_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_academy_session_form" model="ir.ui.view">
+        <field name="name">academy.session.form</field>
+        <field name="model">academy.session</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="session_number" readonly="1"/>
+                        <field name="date_start"/>
+                        <field name="date_end"/>
+                        <field name="course_id"/>
+                        <field name="instructor_id"/>
+                        <field name="student_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_academy_session" model="ir.actions.act_window">
+        <field name="name">Sessions</field>
+        <field name="res_model">academy.session</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

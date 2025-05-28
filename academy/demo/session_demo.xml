@@ -2,6 +2,7 @@
 <odoo>
     <record id="academy_session_python_01" model="academy.session">
         <field name="name">Python Session 1</field>
+        <field name="session_number">S0001</field>
         <field name="date_start">2025-06-01 09:00:00</field>
         <field name="date_end">2025-06-01 13:00:00</field>
         <field name="course_id" ref="academy_course_python"/>
@@ -11,10 +12,15 @@
 
     <record id="academy_session_js_01" model="academy.session">
         <field name="name">JavaScript Session 1</field>
+        <field name="session_number">S0001</field>
         <field name="date_start">2025-06-02 10:00:00</field>
         <field name="date_end">2025-06-02 14:00:00</field>
         <field name="course_id" ref="academy_course_js"/>
         <field name="instructor_id" ref="base.user_admin"/>
         <field name="student_ids" eval="[(6, 0, [ref('base.partner_demo')])]"/>
+    </record>
+
+    <record id="seq_academy_session" model="ir.sequence">
+        <field name="number_next">3</field>
     </record>
 </odoo>

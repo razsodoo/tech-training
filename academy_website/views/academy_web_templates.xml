@@ -39,7 +39,7 @@
                     </li>
                     <li class="list-group-item">
                         <strong>Start Date:</strong>
-                        <t t-esc="session.start_date"/>
+                        <t t-esc="session.date_start"/>
                     </li>
                     <li class="list-group-item">
                         <strong>Duration:</strong>
