@@ -3,7 +3,7 @@ from odoo import api, fields, models
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
-    detailed_type = fields.Selection(selection_add=[('course', 'Course')], ondelete={'course': 'set service'})
+    type = fields.Selection(selection_add=[('course', 'Course')], ondelete={'course': 'set service'})
 
     course_ids = fields.One2many(comodel_name="academy.course", inverse_name="product_id")
 

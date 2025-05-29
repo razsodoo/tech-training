@@ -20,6 +20,7 @@
 
     # only loaded in demonstration mode
     'demo': [
+        'demo/academy_sale_demo.xml',
     ],
 
     'auto_install': True,

@@ -1,18 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="academy_course_python" model="academy.course">
-        <field name="name">Python for Beginners</field>
-        <field name="description">Introductory course to Python programming.</field>
-        <field name="level">beginner</field>
-        <field name="base_price">100</field>
-        <field name="additional_fee">20</field>
-    </record>
+    <data noupdate="1">
+        <record id="academy_course_python" model="academy.course">
+            <field name="name">Python for Beginners</field>
+            <field name="description">Introductory course to Python programming.</field>
+            <field name="level">beginner</field>
+            <field name="base_price">100</field>
+            <field name="additional_fee">20</field>
+        </record>
 
-    <record id="academy_course_js" model="academy.course">
-        <field name="name">JavaScript Essentials</field>
-        <field name="description">Fundamentals of JavaScript for frontend development.</field>
-        <field name="level">intermediate</field>
-        <field name="base_price">150</field>
-        <field name="additional_fee">30</field>
-    </record>
+        <record id="academy_course_js" model="academy.course">
+            <field name="name">JavaScript Essentials</field>
+            <field name="description">Fundamentals of JavaScript for frontend development.</field>
+            <field name="level">intermediate</field>
+            <field name="base_price">150</field>
+            <field name="additional_fee">30</field>
+        </record>
+    </data>
 </odoo>
