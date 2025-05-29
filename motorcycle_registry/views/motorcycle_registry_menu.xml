@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <!-- Acción que abre la vista de lista del modelo motorcycle.registry -->
-    <record id="action_motorcycle_registry_list" model="ir.actions.act_window">
+    <record id="action_motorcycle_registry" model="ir.actions.act_window">
         <field name="name">Registry</field>
         <field name="res_model">motorcycle.registry</field>
         <field name="view_mode">list,form</field>
@@ -12,7 +11,7 @@
         id="menu_motorcycle_registry_root" 
         name="Motorcycle Registry" 
         sequence="10"
-        action="action_motorcycle_registry_list"
+        action="action_motorcycle_registry"
         web_icon="motorcycle_registry,static/description/icon.png"
     />
 
@@ -21,7 +20,7 @@
         id="menu_motorcycle_registry_registry" 
         name="Registry" 
         parent="menu_motorcycle_registry_root" 
-        action="action_motorcycle_registry_list"
+        action="action_motorcycle_registry"
         sequence="10"
     />
 </odoo>
