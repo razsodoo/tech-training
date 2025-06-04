@@ -12,7 +12,7 @@
 
     <record id="academy_session_js_01" model="academy.session">
         <field name="name">JavaScript Session 1</field>
-        <field name="session_number">S0001</field>
+        <field name="session_number">S0002</field>
         <field name="date_start">2025-06-02 10:00:00</field>
         <field name="date_end">2025-06-02 14:00:00</field>
         <field name="course_id" ref="academy_course_js"/>
