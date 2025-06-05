@@ -1,0 +1,198 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* academy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-05 22:11+0000\n"
+"PO-Revision-Date: 2025-06-05 22:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: academy
+#: model:ir.ui.menu,name:academy.academy_root_menu
+msgid "Academy"
+msgstr "Académie"
+
+#. module: academy
+#: model:res.groups,name:academy.group_academy_admin
+msgid "Academy/Admin"
+msgstr "Académie/Administrateur"
+
+#. module: academy
+#: model:res.groups,name:academy.group_academy_user
+msgid "Academy/User"
+msgstr "Académie/Utilisateur"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__additional_fee
+msgid "Additional Fee"
+msgstr "Frais supplémentaires"
+
+#. module: academy
+#: model:ir.model.fields.selection,name:academy.selection__academy_course__level__advanced
+msgid "Advanced"
+msgstr "Avancé"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__base_price
+msgid "Base Price"
+msgstr "Prix de base"
+
+#. module: academy
+#. odoo-python
+#: code:addons/academy/models/course.py:0
+msgid "Base Price can not be negative"
+msgstr "Le prix de base ne peut pas être négatif"
+
+#. module: academy
+#: model:ir.model.fields.selection,name:academy.selection__academy_course__level__beginner
+msgid "Beginner"
+msgstr "Débutant"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_session__course_id
+msgid "Course"
+msgstr "Cours"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_session__description
+msgid "Course Description"
+msgstr "Description du cours"
+
+#. module: academy
+#: model:ir.model,name:academy.model_academy_course
+msgid "Course Info"
+msgstr "Informations sur le cours"
+
+#. module: academy
+#: model:ir.actions.act_window,name:academy.action_academy_course
+#: model:ir.ui.menu,name:academy.academy_menu_course
+msgid "Courses"
+msgstr "Cours"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__create_uid
+#: model:ir.model.fields,field_description:academy.field_academy_session__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__create_date
+#: model:ir.model.fields,field_description:academy.field_academy_session__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__description
+msgid "Description"
+msgstr "Description"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__display_name
+#: model:ir.model.fields,field_description:academy.field_academy_session__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_session__date_end
+msgid "End Date"
+msgstr "Date de fin"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__id
+#: model:ir.model.fields,field_description:academy.field_academy_session__id
+msgid "ID"
+msgstr "ID"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_session__instructor_id
+msgid "Instructor"
+msgstr "Instructeur"
+
+#. module: academy
+#: model:ir.model.fields.selection,name:academy.selection__academy_course__level__intermediate
+msgid "Intermediate"
+msgstr "Intermédiaire"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__write_uid
+#: model:ir.model.fields,field_description:academy.field_academy_session__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__write_date
+#: model:ir.model.fields,field_description:academy.field_academy_session__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__level
+msgid "Level"
+msgstr "Niveau"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_session__duration
+msgid "Session Duration"
+msgstr "Durée de la session"
+
+#. module: academy
+#: model:ir.model,name:academy.model_academy_session
+msgid "Session Info"
+msgstr "Informations sur la session"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_session__session_number
+msgid "Session Number"
+msgstr "Numéro de session"
+
+#. module: academy
+#: model:ir.actions.act_window,name:academy.action_academy_session
+#: model:ir.model.fields,field_description:academy.field_academy_course__session_ids
+#: model:ir.ui.menu,name:academy.academy_menu_session
+#: model_terms:ir.ui.view,arch_db:academy.view_academy_course_form
+msgid "Sessions"
+msgstr "Sessions"
+
+#. module: academy
+#: model_terms:ir.ui.view,arch_db:academy.session_view_calendar
+msgid "Sessions Calendar"
+msgstr "Calendrier des sessions"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_session__date_start
+msgid "Start Date"
+msgstr "Date de début"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_session__student_ids
+msgid "Students"
+msgstr "Étudiants"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__name
+#: model:ir.model.fields,field_description:academy.field_academy_session__name
+msgid "Title"
+msgstr "Titre"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_course__total_price
+msgid "Total Price"
+msgstr "Prix total"
