@@ -20,7 +20,20 @@ class ProductTemplate(models.Model):
     make = fields.Char()
     model = fields.Char()
     year = fields.Char()
+    name = fields.Char(compute='_compute_name', readonly=False, store=True)
 
+    @api.depends('is_motorcycle', 'make', 'model', 'year')
+    def _compute_name(self):
+        for rec in self:
+            if rec.is_motorcycle:
+                # Computamos el nombre: "year make model"
+                name_parts = [rec.year or '', rec.make or '', rec.model or '']
+                rec.name = ' '.join(filter(None, name_parts)).strip()
+            else:
+                # Si no es motocicleta, respetamos el valor previo (deja vacío si no hay ninguno)
+                if not rec.name:
+                    rec.name = ''
+                    
     @api.depends('is_motorcycle', 'year', 'make', 'model', 'name')
     def _compute_display_name(self):
         for product in self:

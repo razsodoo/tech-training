@@ -28,7 +28,7 @@ class MotorcycleRegistry(models.Model):
         ('license_plate_unique', 'unique(license_plate)', 'The licence plate must be unique.'),
         ('vin_unique', 'unique(vin)', 'The VIN must be unique.'),
     ]
-
+                    
     @api.depends('vin')
     def _compute_vin_fields(self):
         for rec in self:
