@@ -13,6 +13,7 @@
         "security/security.xml",
         "security/ir.model.access.csv",
         'data/motorcycle_registry_sequence.xml',
+        'data/product_category.xml',
         'data/pricelist_data.xml',
         "views/motorcycle_registry_menu.xml",
         "views/motorcycle_registry_view.xml",

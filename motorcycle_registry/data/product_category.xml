@@ -1,0 +1,6 @@
+<odoo>
+    <record id="product_category_motorcycle" model="product.category">
+        <field name="name">Motorcycle</field>
+        <field name="parent_id" ref="product.product_category_all"/>
+    </record>
+</odoo>

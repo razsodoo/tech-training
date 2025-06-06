@@ -7,7 +7,8 @@
 
     <record id="motorcycle_discount_pricelist_item" model="product.pricelist.item">
         <field name="pricelist_id" ref="motorcycle_discount_pricelist"/>
-        <field name="applied_on">3_global</field>
+        <field name="display_applied_on">2_product_category</field>
+        <field name="categ_id" ref="motorcycle_registry.product_category_motorcycle"/>
         <field name="compute_price">formula</field>
         <field name="price_surcharge">-2500</field>
     </record>

@@ -22,6 +22,20 @@ class ProductTemplate(models.Model):
     year = fields.Char()
     name = fields.Char(compute='_compute_name', readonly=False, store=True)
 
+    @api.model_create_multi
+    def create(self, vals_list):
+        motorcycle_category = self.env.ref('motorcycle_registry.product_category_motorcycle', raise_if_not_found=False)
+        for vals in vals_list:
+            if vals.get('is_motorcycle') and not vals.get('categ_id') and motorcycle_category:
+                vals['categ_id'] = motorcycle_category.id
+        return super().create(vals_list)
+
+    @api.onchange('is_motorcycle')
+    def _onchange_is_motorcycle_set_category(self):
+        motorcycle_category = self.env.ref('motorcycle_registry.product_category_motorcycle', raise_if_not_found=False)
+        if self.is_motorcycle and motorcycle_category and self.categ_id != motorcycle_category:
+            self.categ_id = motorcycle_category
+                
     @api.depends('is_motorcycle', 'make', 'model', 'year')
     def _compute_name(self):
         for rec in self:
