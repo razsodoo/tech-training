@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_template_search_view_inherit" model="ir.ui.view">
+        <field name="name">product.template.search.inherit.motorcycle</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="type">search</field>
+        <field name="arch" type="xml">
+            <xpath expr="filter[@name='combo']" position="after">
+                <filter string="Motorcycles Only" name="moto" domain="[('is_motorcycle','=',True)]"/>
+            </xpath>
+        </field>
+
+         
+    </record>
+</odoo>
