@@ -10,9 +10,10 @@
     'author': 'fsrs',
     'website': 'www.odoo.com',
     'category': 'Custom Modules/Tech Training',
-    'depends': ['base'],
+    'depends': ['base', 'l10n_mx', 'contacts'],
     'data': [
         'data/academy_session_sequence.xml',
+        'data/addenda_test.xml',
         'security/academy_groups.xml',
         'security/ir.model.access.csv',
         'security/academy_security.xml',

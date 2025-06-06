@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Registramos la addenda en el modelo correcto -->
+        <record id="l10n_mx_edi_addenda_test_record" model="l10n_mx_edi.addenda">
+            <field name="name">Test Addenda</field>
+            <field name="arch" type="xml">
+                <Addenda>
+                    Customer=<t t-esc="record.partner_id.name"/>
+                    <Inicial>
+                        <NumeroFacturaOriginal><t t-esc="record.name"/></NumeroFacturaOriginal>
+                    </Inicial>
+                </Addenda>
+            </field>
+        </record>
+    </data>
+</odoo>
