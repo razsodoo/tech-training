@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="motorcycle_discount_pricelist" model="product.pricelist">
+        <field name="name">Motorcycle New Customer Discount</field>
+        <field name="currency_id" ref="base.USD"/>
+    </record>
+
+    <record id="motorcycle_discount_pricelist_item" model="product.pricelist.item">
+        <field name="pricelist_id" ref="motorcycle_discount_pricelist"/>
+        <field name="applied_on">3_global</field>
+        <field name="compute_price">formula</field>
+        <field name="price_surcharge">-2500</field>
+    </record>
+</odoo>

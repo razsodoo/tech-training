@@ -3,4 +3,19 @@
     <record id="sale.product_template_action" model="ir.actions.act_window">
         <field name="context">{'search_default_moto': 1}</field>
     </record>
+
+    <record id="sale_order_form_inherit_discount_button" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.discount</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button name="apply_motorcycle_discount"
+                        type="object"
+                        string="Apply Discount"
+                        class="btn-primary"
+                        invisible="not partner_id.is_new_customer or state != 'draft'"/>
+            </header>
+        </field>
+    </record>
 </odoo>
